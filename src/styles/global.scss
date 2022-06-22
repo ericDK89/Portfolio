@@ -2,23 +2,21 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  
 }
 
 :root {
-  --orange-300: #ffc09f;
+  --orange-500: #cf5c36;
 
-  --yellow-200: #fcf5c7;
-  --yellow-400: #ffee93;
+  --white-300: #e1e1e6;
 
-  --blue-400: #8bc6ec;
+  --gray-500: #8d8d99;
+  --gray-600: #7c7c8a;
 
-  --purple-400: #9599e2;
+  --black-800: #202024;
 }
 
 :focus {
   outline: transparent;
-  box-shadow: 0 0 0 2px var(--green-400);
 }
 
 @media (max-width: 1080px) {
@@ -36,7 +34,7 @@
 body {
   height: 100vh;
   -webkit-font-smoothing: antialiased;
-  background-color: #141414;
+  background-color: #121214;
 }
 
 body,
@@ -44,7 +42,7 @@ input,
 textarea,
 select,
 button {
-  font: 400 1rem "Roboto", sans-serif;
+  font: 400 1rem "Poppins";
 }
 
 button {
