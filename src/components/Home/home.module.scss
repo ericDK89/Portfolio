@@ -1,0 +1,129 @@
+.homeContainer {
+  background-color: var(--black-700);
+  margin-top: 6rem;
+  padding: 2.5rem;
+  border-radius: 8px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  border-bottom: 2px solid var(--orange-500);
+  text-align: center;
+}
+
+.homeMain {
+  color: var(--gray-400);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  p {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    border-right: 1px solid #fff;
+    width: fit-content;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+}
+
+.typingAnimation {
+  animation: blickCursor 800ms infinite, typing 4s steps(40) 1s normal both;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 30rem;
+  }
+}
+
+@keyframes blickCursor {
+  from {
+    border-right-color: rgba(255, 255, 255, 0.75);
+  }
+
+  to {
+    border-right-color: transparent;
+  }
+}
+
+.homeFooter {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4rem;
+
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--orange-500);
+    padding: 0.5rem 2rem;
+    border-radius: 10px;
+    color: #fff;
+
+    &:hover {
+      filter: brightness(0.8);
+    }
+  }
+}
+
+.homeArticle {
+  img {
+    width: 35rem;
+    border-radius: 50px;
+  }
+}
+
+@media (max-width: 770px) {
+  .homeContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .homeMain {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    p {
+      font-size: 1.5rem;
+    }
+
+    @keyframes typing {
+      from {
+        width: 0;
+      }
+      to {
+        width: 18rem;
+      }
+    }
+  }
+
+  .homeArticle {
+    img {
+      width: 275px;
+      border-radius: 8px;
+    }
+  }
+
+  .homeFooter {
+    display: block;
+    gap: 0.5rem;
+    flex-direction: column;
+    margin-top: 2rem;
+
+    a {
+      margin-bottom: 1rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

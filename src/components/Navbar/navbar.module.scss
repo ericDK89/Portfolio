@@ -1,7 +1,11 @@
 .navbarContainer {
-  background-color: var(--black-800);
+  background-color: var(--black-700);
   padding: 1rem 0;
   border-bottom: 1px solid var(--orange-500);
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
 }
 
 .navbarContent {
@@ -49,5 +53,21 @@
       border-bottom: 2px solid var(--gray-600);
       border-radius: 5px;
     }
+  }
+}
+
+@media (max-width: 770px) {
+  .navbarContainer {
+    padding: 1rem;
+  } 
+
+  .navbarInfo {
+    h1 {
+      line-height: 35px;
+    }
+  }
+
+  .navbarNavigation {
+    display: none;
   }
 }
