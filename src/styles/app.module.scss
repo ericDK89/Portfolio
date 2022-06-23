@@ -1,0 +1,29 @@
+.wrapper {
+  max-width: 70rem;
+  width: 100%;
+  margin: auto;
+}
+
+.projects {
+  max-width: 90vw;
+  width: 100%;
+  margin: 1rem auto auto;
+}
+
+.aboutSpan {
+  color: var(--white-300);
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+  font-size: 1.75rem;
+  text-decoration: underline;
+}
+
+.projectsSpan {
+  color: var(--white-300);
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+  font-size: 1.75rem;
+  text-decoration: underline;
+}

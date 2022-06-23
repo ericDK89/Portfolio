@@ -5,10 +5,11 @@ export function About() {
     <section className={styles.aboutContainer}>
       <div className={styles.aboutInfo}>
         <img src="http://github.com/ericDK89.png" alt="Eric Macedo" />
-        <span>Nome: Eric Macedo</span>
-        <span>Idade: 23 anos</span>
-        <address>Cidade: São Paulo-SP</address>
-        <span>Email: ericthr42@gmail.com</span>
+        <span>Nome: <span>Eric Macedo</span></span>
+        <span>Idade: <span>23 anos</span></span>
+        <address>Cidade: <span>São Paulo-SP</span></address>
+        <span>Email: <span>ericthr42@gmail.com</span></span>
+        <span>WhatsApp: <span>(11) 95724-0038</span></span>
       </div>
 
       <footer className={styles.aboutFooter}>

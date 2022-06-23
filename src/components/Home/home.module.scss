@@ -28,7 +28,14 @@
 }
 
 .typingAnimation {
+  display: flex;
+  align-items: center;
   animation: blickCursor 800ms infinite, typing 4s steps(40) 1s normal both;
+  
+  img {
+    margin-left: 10px;
+    width: 48px;
+  }
 }
 
 @keyframes typing {
@@ -36,7 +43,7 @@
     width: 0;
   }
   to {
-    width: 30rem;
+    width: 28rem;
   }
 }
 
