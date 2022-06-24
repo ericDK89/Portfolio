@@ -7,16 +7,14 @@ import styles from "./styles/app.module.scss";
 
 export function App() {
   return (
-    <>
+    <div className={styles.app}>
       <Navbar />
       <Home />
-      
+
       <main className={styles.wrapper}>
-      <span className={styles.aboutSpan}>Sobre</span>
         <About />
       </main>
-      
-      <span className={styles.projectsSpan}>Projetos</span>
+
       <section className={styles.projects}>
         <Projects />
       </section>
@@ -24,6 +22,6 @@ export function App() {
       <div>
         <Footer />
       </div>
-    </>
+    </div>
   );
 }

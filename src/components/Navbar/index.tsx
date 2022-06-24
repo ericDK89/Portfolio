@@ -22,6 +22,11 @@ export function Navbar() {
     addEventListener("scroll", onScroll);
   }, [pageScrollY]);
 
+  function navbarMobileFunctions(x: number, y: number) {
+    scrollTo(x, y);
+    setIsMobile(false);
+  }
+
   return (
     <nav
       className={
@@ -37,24 +42,45 @@ export function Navbar() {
         <div className={style.navbarNavigationMobile}>
           {!isMobile ? (
             <button
-              title="Abrir e fechar menu lateral"
+              title="Abrir menu lateral"
               onClick={() => setIsMobile(true)}
             >
               <List size={32} />
             </button>
           ) : (
             <nav>
-              <button onClick={() => setIsMobile(false)}>
+              <button
+                title="Fechar menu lateral"
+                onClick={() => setIsMobile(false)}
+              >
                 <X className={style.closeButton} size={32} color="#fff" />
               </button>
               <div className={style.navbarNavigationMobileDiv}>
-                <button type="button" onClick={() => scrollTo(0, 0)}>Home</button>
-                <button type="button" onClick={() => scrollTo(0, 600)}>Sobre</button>
-                <button type="button" onClick={() => scrollTo(0, 1150)}>Projetos</button>
+                <button
+                  type="button"
+                  onClick={() => navbarMobileFunctions(0, 0)}
+                >
+                  Home
+                </button>
+                <button
+                  type="button"
+                  onClick={() => navbarMobileFunctions(0, 850)}
+                >
+                  Sobre
+                </button>
+                <button
+                  type="button"
+                  onClick={() => navbarMobileFunctions(0, 1600)}
+                >
+                  Projetos
+                </button>
               </div>
 
               <footer>
-                <a href="https://www.linkedin.com/in/eric-macedo-dev/" target={"_blank"}>
+                <a
+                  href="https://www.linkedin.com/in/eric-macedo-dev/"
+                  target={"_blank"}
+                >
                   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" />
                 </a>
                 <a href="https://github.com/ericDK89" target={"_blank"}>
@@ -66,9 +92,15 @@ export function Navbar() {
         </div>
 
         <div className={style.navbarNavigation}>
-          <button type="button" onClick={() => scrollTo(0, 0)}>Home</button>
-          <button type="button" onClick={() => scrollTo(0, 600)}>Sobre</button>
-          <button type="button" onClick={() => scrollTo(0, 1150)}>Projetos</button>
+          <button type="button" onClick={() => navbarMobileFunctions(0, 0)}>
+            Home
+          </button>
+          <button type="button" onClick={() => navbarMobileFunctions(0, 600)}>
+            Sobre
+          </button>
+          <button type="button" onClick={() => navbarMobileFunctions(0, 1150)}>
+            Projetos
+          </button>
         </div>
       </div>
     </nav>

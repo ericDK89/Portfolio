@@ -13,7 +13,7 @@ export function About() {
       </div>
 
       <footer className={styles.aboutFooter}>
-        <strong>Habilidades</strong>
+        <strong>Soft skills</strong>
         <div className={styles.aboutSkills}>
           <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" />
           <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" />

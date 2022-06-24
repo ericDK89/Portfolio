@@ -1,11 +1,12 @@
 .aboutContainer {
-  margin-top: 1rem;
+  margin-top: 6rem;
   border-radius: 8px;
   background-color: var(--black-700);
   padding: 2.5rem;
   display: flex;
   justify-content: space-around;
   border-bottom: 1px solid var(--orange-500);
+  box-shadow: 0 0 4rem var(--black-800);
 }
 
 .aboutInfo {

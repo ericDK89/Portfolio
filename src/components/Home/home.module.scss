@@ -70,11 +70,11 @@
     align-items: center;
     background-color: var(--orange-500);
     padding: 0.5rem 2rem;
-    border-radius: 10px;
+    border-radius: 8px;
     color: #fff;
 
     &:hover {
-      filter: brightness(0.8);
+      filter: brightness(1.2);
     }
   }
 }
