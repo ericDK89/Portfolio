@@ -2,16 +2,12 @@
   background-color: var(--black-700);
   border-radius: 8px;
   padding: 1rem;
-  height: 350px;
 }
 
 .projectContent {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  gap: 0.5rem;
+  justify-content: space-between;
+  gap: 1rem;
 
   > a {
     img {
@@ -25,31 +21,62 @@
   }
 }
 
-.projectDivFlex {
+.projectDivTitleAndDescription {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   gap: 0.5rem;
+
 
   header {
     strong {
       display: block;
       color: var(--white-300);
-      font-size: 1.5rem;
+      font-size: 1.1rem;
     }
 
     span {
       display: block;
+      font-size: 0.9rem;
+      line-height: 1.3125rem;
       color: var(--gray-500);
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  .projectDivTechs {
+    strong {
+      display: block;
+      color: var(--white-300);
+      font-size: 1.1rem;
+    }
+
+    > div {
+      display: grid;
+      margin: 0.5rem 0;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+
+      span {
+        background-color: var(--black-800);
+        border-radius: 5px;
+        padding: 0.1rem 1rem;
+        width: min-content;
+        color: var(--white-300);
+      }
     }
   }
 
   footer {
+    text-align: center;
+
     a {
       color: var(--gray-500);
       border-bottom: 1px solid var(--gray-500);
       padding: 0.25rem;
       border-radius: 8px;
       transition: all 0.2s;
+      letter-spacing: 1px;
 
       &:hover {
         border-bottom: 1px solid var(--white-300);

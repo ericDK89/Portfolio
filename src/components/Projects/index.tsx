@@ -1,40 +1,9 @@
-import { gql, useQuery } from "@apollo/client";
+import { useGetProjectsQueryQuery } from "../../graphql/generated";
 import { Project } from "../Project";
 import styles from "./projects.module.scss";
 
-export interface GetProjectsQuery {
-  projetos: [
-    {
-      id: string;
-      image: {
-        url: string;
-      };
-      linkToSite: string;
-      title: string;
-      description: string;
-      linkToGithub: string;
-    }
-  ];
-}
-
-const GET_PROJECTS_QUERY = gql`
-  query MyQuery {
-    projetos {
-      id
-      linkToGithub
-      linkToSite
-      image {
-        url
-      }
-      title
-    }
-  }
-`;
-
 export function Projects() {
-  const { data, loading } = useQuery<GetProjectsQuery>(GET_PROJECTS_QUERY);
-
-  console.log(data?.projetos);
+  const { data, loading } = useGetProjectsQueryQuery();
 
   return (
     <>
@@ -51,6 +20,10 @@ export function Projects() {
                 title={data.title}
                 description={data.description}
                 linkToGithub={data.linkToGithub}
+                tech1={data.tech1}
+                tech2={data.tech2}
+                tech3={data.tech3}
+                tech4={data.tech4}
               />
             );
           })}

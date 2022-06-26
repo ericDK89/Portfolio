@@ -1,0 +1,16 @@
+query GetProjectsQuery {
+  projetos {
+    id
+    linkToGithub
+    linkToSite
+    description
+    image {
+      url
+    }
+    title
+    tech1
+    tech2
+    tech3
+    tech4
+  }
+}
